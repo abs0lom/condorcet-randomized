@@ -1,6 +1,6 @@
 #!/bin/node
 
-const CondorcetRandomized = require('./index.js')
+const CondorcetRandomized = require('..')
 
 const c = new CondorcetRandomized()
 
