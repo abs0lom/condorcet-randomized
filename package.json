@@ -1,0 +1,33 @@
+{
+  "name": "condorcet-randomized",
+  "version": "1.0.0",
+  "description": "--> https://fr.wikipedia.org/wiki/Scrutin_de_Condorcet_randomis%C3%A9",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "yarn eslint .",
+    "lint:fix": "yarn eslint --fix --cache ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abs0lom/condorcet-randomized.git"
+  },
+  "author": "abs0lom <olivier@make-it.fr>",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/abs0lom/condorcet-randomized/issues"
+  },
+  "homepage": "https://github.com/abs0lom/condorcet-randomized#readme",
+  "devDependencies": {
+    "eslint": "^7.5.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^4.2.5"
+  }
+}
