@@ -9,7 +9,7 @@ const candidateB = c.addCandidate('B')
 const candidateC = c.addCandidate('C')
 
 c.addVote([candidateA, candidateB, candidateC])
-c.addVote([candidateB, candidateC, candidateA])
+c.addVote([candidateA, candidateC, candidateB])
 c.addVote([candidateC, candidateA, candidateB])
 
-c.generateLottery()
+console.log(c.generateLottery())

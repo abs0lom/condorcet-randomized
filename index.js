@@ -14,14 +14,14 @@ class CondorcetRandomized {
       throw new Error('"' + candidate + '" is allredy in candidates')
     }
 
-    const total = this.candidates.push(candidate)
+    const total = this.candidates.push({ name: candidate, probability: 0 })
 
     return total - 1
   }
 
   addVote (vote) {
     if (!Array.isArray(vote)) {
-      throw new Error('vote must be a non empty array')
+      throw new Error('vote must be an array')
     }
 
     if (vote.length > this.candidates.length) {
@@ -71,12 +71,15 @@ class CondorcetRandomized {
   generateLottery () {
     this.candidates.forEach((a, i) => {
       this.candidates.forEach((b, j) => {
-        if (!this.matrix[i] || !this.matrix[i][j]) {
+        if (!Array.isArray(this.matrix[i]) || !this.matrix[i][j]) {
           this.resolveDuel(i, j)
         }
       })
     })
-    console.log(this.matrix)
+
+    this.candidates.sort((a, b) => b.probability - a.probability)
+
+    return this.candidates
   }
 };
 
